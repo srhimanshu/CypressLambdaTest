@@ -1,0 +1,28 @@
+name: Cypress_LambdaTest Build
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      # Steps represent a sequence of tasks that will be executed as part of the job
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - name: NPM with Cypress
+      - run: npm install
+
+      - name: Cupress run
+        uses: cypress-io/github-action@v4
+        with:
+          start: npm start
+          working-directory: cd Cypress_LambdaTest
+          command: lambdatest-cypress run
+          spec: |
+            QA-Tools/Cypress_LambdaTest/
+            cypress/e2e/e2e testing/Common/*.cy.js
+          record: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.f6e78c45-1c38-45b2-b600-a9e54eb54c34 }}
+          GITHUB_TOKEN: ${{ secrets.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 }}
