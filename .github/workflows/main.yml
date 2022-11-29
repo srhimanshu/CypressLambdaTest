@@ -11,6 +11,8 @@ jobs:
         with:
           node-version: 16
       - name: NPM with Cypress
+        run : npm config set legacy-peer-deps true
+      - name: Install NPM
         run: npm install
 
       - name: Cupress run
