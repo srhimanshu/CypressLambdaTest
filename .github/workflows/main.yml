@@ -18,6 +18,7 @@ jobs:
       - name: Cupress run
         uses: cypress-io/github-action@v4
         with:
+          path: Cypress_LambdaTest/lambdatest-config.json
           start: npm start
           command: lambdatest-cypress run
           spec: |
