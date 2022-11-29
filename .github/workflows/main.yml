@@ -11,16 +11,14 @@ jobs:
         with:
           node-version: 16
       - name: NPM with Cypress
-      - run: npm install
+        run: npm install
 
       - name: Cupress run
         uses: cypress-io/github-action@v4
         with:
           start: npm start
-          working-directory: cd Cypress_LambdaTest
           command: lambdatest-cypress run
           spec: |
-            QA-Tools/Cypress_LambdaTest/
             cypress/e2e/e2e testing/Common/*.cy.js
           record: true
         env:
