@@ -29,7 +29,7 @@
   "run_settings": {
     "config_file": "cypress.config.js",
     "reporter_config_file": "base_reporter_config.json",
-    "build_name": "New Kurator Login",
+    "build_name": "Kurator e2e",
     "parallels": 5,
     "specs": "./cypress/e2e/e2e testing/*/*.cy.js",
     "ignore_files": "",
