@@ -18,11 +18,8 @@ jobs:
       - name: Cupress run
         uses: cypress-io/github-action@v4
         with:
-          path: Cypress_LambdaTest/lambdatest-config.json
           start: npm start
           command: lambdatest-cypress run
-          spec: |
-            cypress/e2e/e2e testing/Common/*.cy.js
           record: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.f6e78c45-1c38-45b2-b600-a9e54eb54c34 }}
