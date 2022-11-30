@@ -14,6 +14,8 @@ jobs:
         run : npm config set legacy-peer-deps true
       - name: Install NPM
         run: npm install
+      - name: Install LambdaCLI
+        run: npm install -g lambdatest-cypress-cli
 
       - name: Cupress run
         uses: cypress-io/github-action@v4
