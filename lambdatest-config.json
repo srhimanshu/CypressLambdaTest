@@ -10,7 +10,7 @@
       "versions": ["latest-1"]
     },
     {
-      "browser": "Safari",
+      "browser": "Firefox",
       "platform": "macOS Monterey",
       "versions": ["latest-1"]
     },
